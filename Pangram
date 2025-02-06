@@ -1,0 +1,8 @@
+import string
+
+def is_pangram(sentence):
+    alphabet = set(string.ascii_lowercase)
+    return set(sentence.lower()) >= alphabet
+
+text = input("Enter a sentence: ")
+print("Pangram" if is_pangram(text) else "Not a pangram")
